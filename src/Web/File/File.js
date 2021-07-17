@@ -1,5 +1,5 @@
 "use strict";
 
-exports.name = function (file) { return file.name; };
+export var name = function (file) { return file.name; };
 
-exports.lastModified = function (file) { return file.lastModified; };
+export var lastModified = function (file) { return file.lastModified; };

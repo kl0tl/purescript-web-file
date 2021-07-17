@@ -1,34 +1,34 @@
 "use strict";
 
-exports.fileReader = function () {
+export var fileReader = function () {
   return new FileReader();
 };
 
-exports.error = function (fr) {
+export var error = function (fr) {
   return function () {
     return fr.error;
   };
 };
 
-exports.readyStateImpl = function (fr) {
+export var readyStateImpl = function (fr) {
   return function () {
     return fr.readyState;
   };
 };
 
-exports.result = function (fr) {
+export var result = function (fr) {
   return function () {
     return fr.result;
   };
 };
 
-exports.abort = function (fr) {
+export var abort = function (fr) {
   return function () {
     fr.abort();
   };
 };
 
-exports.readAsText = function (blob) {
+export var readAsText = function (blob) {
   return function (fr) {
     return function () {
       fr.readAsText(blob);
@@ -36,7 +36,7 @@ exports.readAsText = function (blob) {
   };
 };
 
-exports.readAsArrayBuffer = function (blob) {
+export var readAsArrayBuffer = function (blob) {
   return function (fr) {
     return function () {
       fr.readAsArrayBuffer(blob);
@@ -44,7 +44,7 @@ exports.readAsArrayBuffer = function (blob) {
   };
 };
 
-exports.readAsDataURL = function (blob) {
+export var readAsDataURL = function (blob) {
   return function (fr) {
     return function () {
       fr.readAsDataURL(blob);
